@@ -1,0 +1,4 @@
+getElement1(int*) : 8
+getElement1(int*) : 9
+getElement2(int*, int) : 17
+getElement2(int*, int) : 19
