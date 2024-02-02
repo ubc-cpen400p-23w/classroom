@@ -1,0 +1,3 @@
+Line 8: x is tainted
+Line 12: z is tainted
+Tainted: {x,z}
