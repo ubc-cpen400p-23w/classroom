@@ -143,9 +143,14 @@ Notice the use of `--shared -fPIC` options.
 
 Please make the shared library in C++, and make sure to wrap the exported functions with the  `extern "C"` construct. This will make sure that your shared library can also be used with applications (Test cases) written in C. [https://stackoverflow.com/questions/2587613/what-is-the-effect-of-declaring-extern-c-in-the-header-to-a-c-shared-libra](https://stackoverflow.com/questions/2587613/what-is-the-effect-of-declaring-extern-c-in-the-header-to-a-c-shared-libra)
 
-4. Run your LLVM pass using `opt` on the IR file.
+3. Link the shared library to the IR file, resulting in an fault injected executable.
 ``` bash
 clang++ QuicksortFI.ll RuntimeFI.so -o QuicksortFI
+```
+
+4. Run the fault injected program.
+``` bash
+./QuicksortFI
 ```
 
 ## Hint
